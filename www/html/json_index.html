@@ -1,0 +1,27 @@
+<!-- JSONの結果表示テンプレ -->
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
+        <title>JSON内容表示テンプレ</title>
+    </head>
+    <body>
+        <p id="obj_id"></p>
+        <p id="obj_name"></p>
+        <p id="obj_attribute_gender"></p>
+        <p id="obj_attribute_phone_number"></p>
+        <p id="obj_attribute_birth"></p>   
+    </body>
+</html>
+
+<script>
+    var json_str = '{"id":1, "name":"suzuki", "attribute":{"gender":"male", "phone_number":"xxxxxxxxxxx", "birth":"1991/01/01"}}';
+    var obj = JSON.parse(json_str)
+    document.getElementById("obj_id").textContent = obj.id
+    document.getElementById("obj_name").textContent = obj.name
+    document.getElementById("obj_attribute_gender").textContent = obj.attribute.gender
+    document.getElementById("obj_attribute_phone_number").textContent = obj.attribute.phone_number
+    document.getElementById("obj_attribute_birth").textContent = obj.attribute.birth
+    
+</script>
