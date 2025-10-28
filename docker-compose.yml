@@ -37,10 +37,19 @@ services:
       - PMA_PASSWORD=study_pass
     depends_on:
       - mysql
-  # mailhog:
-  #   image: mailhog/mailhog:latest
-  #   ports:
-  #     - "8025:8025"
-  #     - "1025:1025"
+  ubuntu:
+    build:
+      context: ./docker/ubuntu
+    container_name: ubuntu
+    tty: true
+    volumes:
+      - ./www:/workspace
+    networks:
+      - default
+# mailhog:
+#   image: mailhog/mailhog:latest
+#   ports:
+#     - "8025:8025"
+#     - "1025:1025"
 volumes:
   storage:

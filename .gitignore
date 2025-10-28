@@ -1,2 +1,5 @@
 docker/mysql/storage/
 selfphp/*
+www/vendor/
+www/html/fullstack-webdev/
+www/html/selfphp/
