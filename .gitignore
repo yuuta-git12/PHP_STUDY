@@ -3,3 +3,4 @@ selfphp/*
 www/vendor/
 www/html/fullstack-webdev/
 www/html/selfphp/
+.env

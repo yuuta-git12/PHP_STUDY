@@ -72,3 +72,16 @@
   - [Apache deflate,exporesについて](https://serverlog.jp/apache2-2/)
 
 https://zenn.dev/dragonarrow/articles/b3fbdf1718a812#手順2%3A-ビルド
+
+## アルゴリズムと数学
+- [自動採点システム](https://atcoder.jp/contests/math-and-algorithm)
+- 標準入力の変数への格納
+```php
+$input = (int)trim(fgets(STDIN));
+
+// 出力
+echo ($input);
+```
+
+
+https://github.com/E869120/math-algorithm-book

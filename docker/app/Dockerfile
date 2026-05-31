@@ -1,4 +1,4 @@
-FROM php:8.2-apache
+FROM php:8.5-apache
 
 # PHP 設定ファイル
 # COPY php.ini /etc/php.ini
@@ -46,12 +46,9 @@ RUN apt-get update && apt-get install -y \
 # RUN pecl install imagick \
 #   && docker-php-ext-enable imagick
 
-COPY xdebug-3.4.0.tar /tmp/
-
-RUN apt-get update \
-    && cd /tmp \
-    && tar xf xdebug-3.4.0.tar \
-    && cd xdebug-3.4.0 \
+RUN cd /tmp \
+    && git clone --depth=1 https://github.com/xdebug/xdebug.git \
+    && cd xdebug \
     && phpize \
     && ./configure \
     && make \

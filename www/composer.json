@@ -1,7 +1,8 @@
 {
     "require": {
-        "guzzlehttp/guzzle": "~7.3.0",
-        "ezyang/htmlpurifier": "*"
+        "guzzlehttp/guzzle": "^7.4.5",
+        "ezyang/htmlpurifier": "*",
+        "aws/aws-sdk-php": "^3.0"
     },
     "autoload": {
         "psr-4": {
@@ -9,6 +10,6 @@
         }
     },
     "require-dev": {
-        "phpunit/phpunit": "^10.5"
+        "phpunit/phpunit": "^12.0"
     }
 }
