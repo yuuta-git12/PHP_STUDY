@@ -3,11 +3,13 @@ class Person{
     
     // 動的メソッド　追加のメソッド群を格納する配列
     private array $methods = [];
+    public const Message = 'ようこそクラスの世界へ';
 
     // コンストラクターの省略構文 PHP8.0以降から使用可
     public function __construct(
         public string $firstName,
-        public string $lastName
+        public string $lastName,
+        public int $age = 0
     ){}
 
     // __CLASS__：定義済み定数の一つ、現在のクラス名を表す
@@ -17,6 +19,14 @@ class Person{
 
     public function show() :void{
         print "<p>僕の名前は{$this->lastName}{$this->firstName}です</p>";
+    }
+
+    public function show_age() :void{
+        print "<p>僕の年齢は{$this->age}歳です</p>";
+    }
+
+    static public function static_show() :string{
+        return static::Message;
     }
 
     // 指定のメソッドを登録
