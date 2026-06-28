@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/src/myclass/Person.php';
+require_once __DIR__ . '/src/myclass/Japanese.php';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -16,6 +17,9 @@ echo '<h2>1. 基本的なオブジェクト生成</h2>';
 $person1 = new Person('太郎', '山田',25);
 $person1->show();
 $person1->show_age();
+
+$japanese = new Japanese('花子','田中',22);
+$japanese->hello();
 
 
 // --- プロパティへの直接アクセス ---
